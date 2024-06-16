@@ -30,6 +30,15 @@ fs.readFile("./data.json", (err, rawData) => {
   }
   const data = JSON.parse(rawData);
 
+  app.get("/" , ()=>{
+    let routeobj = {
+     "for  pie chart data" : "/piedata",
+    " for bar graph data" : "/bardata",
+      " for table data" : "/tabe data"
+    }
+    res.send(routeobj)
+  })
+
   // Define the route handler for /bardata
   app.get("/bardata", (req, res) => {
     const datatosend = [

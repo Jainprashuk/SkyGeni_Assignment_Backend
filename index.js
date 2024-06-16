@@ -30,7 +30,7 @@ fs.readFile("./data.json", (err, rawData) => {
   }
   const data = JSON.parse(rawData);
 
-  app.get("/" , ()=>{
+  app.get("/" , (req,res)=>{
     let routeobj = {
      "for  pie chart data" : "/piedata",
     " for bar graph data" : "/bardata",
